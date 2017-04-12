@@ -1,0 +1,21 @@
+ // provision gpio pin #02 as an input pin with its internal pull down resistor enabled
+        // (configure pin edge to both rising and falling to get notified for HIGH and LOW state
+        // changes)
+
+        myLed.setState(PinState.HIGH);
+
+        // use convenience wrapper method to set state on the pin object
+        myLed.low();
+        myLed.high();
+
+        // use toggle method to apply inverse state on the pin object
+        myLed.toggle();
+
+        // use pulse method to set the pin to the HIGH state for
+        // an explicit length of time in milliseconds
+        myLed.pulse(1000);
+
+        // configure the pin shutdown behavior; these settings will be
+        // automatically applied to the pin when the application is terminated
+        // ensure that the LED is turned OFF when the application is shutdown
+        myLed.setShutdownOptions(true, PinState.LOW, PinPullResistance.OFF);

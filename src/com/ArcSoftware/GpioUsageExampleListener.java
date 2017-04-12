@@ -6,7 +6,7 @@ import com.pi4j.io.gpio.event.GpioPinListenerDigital;
 /**
  * Created by Jake on 4/12/17.
  */
-public static class GpioUsageExampleListener implements GpioPinListenerDigital {
+public class GpioUsageExampleListener implements GpioPinListenerDigital {
     @Override
     public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event) {
         // display pin state on console
